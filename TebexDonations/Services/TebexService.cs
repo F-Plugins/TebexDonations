@@ -79,7 +79,7 @@ namespace TebexDonations.Services
 
             if (!response.IsSuccessStatusCode)
             {
-                _logger.LogError($"HTTP Error: {(int)response.StatusCode}, {response.StatusCode.ToString()}."); Console.WriteLine(3);
+                _logger.LogError($"HTTP Error: {(int)response.StatusCode}, {response.StatusCode.ToString()}.");
 
                 if (response.StatusCode == System.Net.HttpStatusCode.Forbidden)
                 {
@@ -140,7 +140,7 @@ namespace TebexDonations.Services
 
             if (!response.IsSuccessStatusCode)
             {
-                _logger.LogError($"HTTP Error: {(int)response.StatusCode}, {response.StatusCode.ToString()}."); Console.WriteLine(3);
+                _logger.LogError($"HTTP Error: {(int)response.StatusCode}, {response.StatusCode.ToString()}.");
 
                 if (response.StatusCode == System.Net.HttpStatusCode.Forbidden)
                 {
@@ -187,7 +187,7 @@ namespace TebexDonations.Services
 
             if (!response.IsSuccessStatusCode)
             {
-                _logger.LogError($"HTTP Error: {(int)response.StatusCode}, {response.StatusCode.ToString()}."); Console.WriteLine(3);
+                _logger.LogError($"HTTP Error: {(int)response.StatusCode}, {response.StatusCode.ToString()}.");
 
                 if (response.StatusCode == System.Net.HttpStatusCode.Forbidden)
                 {
@@ -246,7 +246,7 @@ namespace TebexDonations.Services
 
             if (!response.IsSuccessStatusCode)
             {
-                _logger.LogError($"HTTP Error: {(int)response.StatusCode}, {response.StatusCode.ToString()}."); Console.WriteLine(3);
+                _logger.LogError($"HTTP Error: {(int)response.StatusCode}, {response.StatusCode.ToString()}.");
 
                 if (response.StatusCode == System.Net.HttpStatusCode.Forbidden)
                 {
