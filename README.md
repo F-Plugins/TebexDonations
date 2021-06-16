@@ -10,7 +10,7 @@ To make it works you have to set up the secret in the configuration, then the pl
 **Run openmod install Feli.TebexDonations**
 
 ### Configuration
-```
+```yml
 TebexConfiguration:
   TebexSecret: "" # Here goes your tebex secret key
   TebexCheckInterval: 60 # Seconds
