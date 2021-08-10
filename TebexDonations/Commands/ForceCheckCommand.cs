@@ -10,7 +10,7 @@ using TebexDonations.API;
 
 namespace TebexDonations.Commands
 {
-    [Command("tebex:forcecheck")]
+    [Command("forcecheck")]
     [CommandDescription("A command to force check the queue of packages")]
     public class ForceCheckCommand : UnturnedCommand
     {
