@@ -127,7 +127,7 @@ namespace TebexDonations.Services
             try
             {
                 _logger.LogDebug("GET - Online - Start");
-                response = await client.GetAsync("queue/online-commands/" + player.id);
+                response = await client.GetAsync("queue/online-commands/" + player.uuid);
                 _logger.LogDebug("GET - Online - Finish");
             }
             catch (Exception ex)
@@ -257,7 +257,7 @@ namespace TebexDonations.Services
 
         private string[] GetCommand(TebexPlayer player, string command)
         {
-            return ArgumentsParser.ParseArguments(command.Replace("{id}", player.id.ToString()).Replace("{username}", player.name));
+            return ArgumentsParser.ParseArguments(command.Replace("{id}", player.uuid.ToString()).Replace("{username}", player.name));
         }
 
         private string[] GetCommand(string id, string name, string command)
