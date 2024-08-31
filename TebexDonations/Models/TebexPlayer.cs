@@ -1,9 +1,15 @@
-﻿namespace TebexDonations.Models
+﻿using System.Text.Json.Serialization;
+using Newtonsoft.Json;
+
+namespace TebexDonations.Models
 {
-    public class TebexPlayer
+    internal class TebexPlayer
     {
-        public int id { get; set; }
-        public string name { get; set; }
-        public string uuid { get; set; }
+        [JsonProperty("id")]
+        public string Id { get; set; } = string.Empty;
+        [JsonProperty("name")]
+        public string Name { get; set; } = string.Empty;
+        [JsonProperty("uuid")]
+        public string UId { get; set; } = string.Empty;
     }
 }

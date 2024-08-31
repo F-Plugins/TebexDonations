@@ -2,10 +2,6 @@
 using OpenMod.Core.Commands;
 using OpenMod.Unturned.Commands;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TebexDonations.API;
 
 namespace TebexDonations.Commands
@@ -14,17 +10,17 @@ namespace TebexDonations.Commands
     [CommandDescription("A command to force check the queue of packages")]
     public class ForceCheckCommand : UnturnedCommand
     {
-        private readonly ITebexService _tebexService;
+        private readonly ITebexAwarder _tebexAwarder;
 
-        public ForceCheckCommand(IServiceProvider serviceProvider, ITebexService service) : base(serviceProvider)
+        public ForceCheckCommand(IServiceProvider serviceProvider, ITebexAwarder tebexAwarder) : base(serviceProvider)
         {
-            _tebexService = service;
+            _tebexAwarder = tebexAwarder;
         }
 
         protected async override UniTask OnExecuteAsync()
         {
             await Context.Actor.PrintMessageAsync("Checking for the queue to execute commands...");
-            await _tebexService.Queue();
+            await _tebexAwarder.ForceCheckAsync();
         }
     }
 }

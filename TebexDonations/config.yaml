@@ -1,6 +1,6 @@
-TebexConfiguration:
-  TebexSecret: "" # Here goes your tebex secret key
-  TebexCheckInterval: 60 # Seconds
-  TebexUrl: "https://plugin.tebex.io/"
-  StoreURL: "yourstore.com"
-  StoreCommand: "/donate" # The command a player will execute to go to the store
+Secret: "" # Here goes your tebex secret key
+Endpoint: "https://plugin.buycraft.net/" # Don't change
+QueueCheckInterval: 300 # Seconds
+
+StoreURL: "fsurvival.tebex.io" # Your actual store url like fsurvival.tebex.io
+StoreCommand: "/donate" # The command a player will execute to go to the store

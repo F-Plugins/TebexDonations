@@ -4,13 +4,13 @@ using OpenMod.Core.Users;
 using System.Drawing;
 using System.Threading.Tasks;
 
-namespace TebexDonations.Commands
+namespace TebexDonations.API.Commands
 {
     public class TebexCommandActor : ICommandActor
     {
-        private readonly ILogger _logger;
+        private readonly ILogger<TebexCommandActor> _logger;
 
-        public TebexCommandActor(ILogger logger)
+        public TebexCommandActor(ILogger<TebexCommandActor> logger)
         {
             _logger = logger;
         }
@@ -25,7 +25,7 @@ namespace TebexDonations.Commands
 
         public Task PrintMessageAsync(string message)
         {
-            _logger.LogInformation(message); 
+            _logger.LogInformation(message);
             return Task.CompletedTask;
         }
 
